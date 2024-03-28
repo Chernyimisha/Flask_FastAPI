@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<p> Создать страницу, на которой будет форма для ввода логина
+    и пароля.<br>
+    При нажатии на кнопку "Отправить" будет произведена<br>
+    проверка соответствия логина и пароля и переход на<br>
+    страницу приветствия пользователя или страницу с<br>
+    ошибкой.</p>
+{% endblock %}
+
+
+{% block content %}
+<h1>АВТОРИЗАЦИЯ</h1>
+<form method=post enctype=multipart/form-data>
+    <input type=text name=login placeholder="Логин">
+    <input type=text name=password placeholder="Пароль">
+    <input type=submit value=Отправить>
+</form>
+{% endblock %}

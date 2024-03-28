@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<p> Создать страницу, на которой будет форма для ввода числа<br>
+    и кнопка "Отправить".<br>
+    При нажатии на кнопку будет произведено<br>
+    перенаправление на страницу с результатом, где будет<br>
+    выведено введенное число и его квадрат.<br>
+    {% endblock %}
+
+
+    {% block content %}
+<h1>Перенаправление на страницу с результатом</h1>
+<form method=post enctype=multipart/form-data>
+    <input type=number name=number placeholder="Введите число">
+    <input type=submit value=Проверить>
+</form>
+{% endblock %}

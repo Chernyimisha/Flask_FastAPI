@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<p> Создать страницу, на которой будет форма для ввода двух<br>
+    чисел и выбор операции (сложение, вычитание, умножение<br>
+    или деление) и кнопка "Вычислить"<br>
+    При нажатии на кнопку будет произведено вычисление<br>
+    результата выбранной операции и переход на страницу с<br>
+    результатом.<br>
+    {% endblock %}
+
+
+    {% block content %}
+<h1>Посчитаем количество слов в тексте</h1>
+<form method=post enctype=multipart/form-data>
+    <input type=number name=num1 placeholder="Вставьте 1 число">
+    <input type=number name=num2 placeholder="Вставьте 2 число">
+    <input type=text name=operation list="operations" placeholder="Выберите операцию"/>
+    <datalist id="operations">
+        <option value="+"></option>
+        <option value="-"></option>
+        <option value="*"></option>
+        <option value="/"></option>
+    </datalist>
+    <input type=submit value=Вычислить>
+</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<p> Создать страницу, на которой будет форма для ввода имени<br>
+    и возраста пользователя и кнопка "Отправить".<br>
+    При нажатии на кнопку будет произведена проверка<br>
+    возраста и переход на страницу с результатом или на<br>
+    страницу с ошибкой в случае некорректного возраста.<br>
+    {% endblock %}
+
+
+    {% block content %}
+<h1>Проверка возраста пользователя</h1>
+<form method=post enctype=multipart/form-data>
+    <input type=text name=name placeholder="Имя">
+    <input type=number name=age placeholder="Возраст">
+    <input type=submit value=Проверить>
+</form>
+{% endblock %}

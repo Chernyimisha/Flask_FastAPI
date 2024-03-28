@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<p> Создать страницу, на которой будет форма для ввода имени<br>
+    и кнопка "Отправить"<br>
+    При нажатии на кнопку будет произведено<br>
+    перенаправление на страницу с flash сообщением, где будет<br>
+    выведено "Привет, {имя}!".<br>
+    {% endblock %}
+
+
+    {% block content %}
+
+<form method=post enctype=multipart/form-data>
+    <input type=text name=name placeholder="Введите имя">
+    <input type=submit value=Проверить>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<p> Создать страницу, на которой будет форма для ввода текста и</p>
+    кнопка "Отправить"</p>
+    При нажатии кнопки будет произведен подсчет количества слов</p>
+    в тексте и переход на страницу с результатом.</p>
+{% endblock %}
+
+
+{% block content %}
+<h1>Посчитаем количество слов в тексте</h1>
+<form method=post enctype=multipart/form-data>
+    <input type=text name=text placeholder="Вставьте текст">
+    <input type=submit value=Отправить>
+</form>
+{% endblock %}

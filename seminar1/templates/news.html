@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/mystyle.css">
+    <title>Таблица новостей</title>
+</head>
+<body>
+<h1>НОВОСТИ</h1>
+
+<table>
+<tr>
+    <th>{{name}}</th>
+    <th>{{text}}</th>
+    <th>{{date}}</th>
+</tr> <!--ряд с ячейками заголовков-->
+    {% for item in news %}
+<tr>
+    <th>{{item.title}}</th>
+    <th>{{item.descr}}</th>
+    <th>{{item.date}}</th>
+</tr> <!--ряд с ячейками тела таблицы-->
+    {%endfor%}
+</table>
+
+</body>
+</html>
